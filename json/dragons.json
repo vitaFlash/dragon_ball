@@ -1,0 +1,22 @@
+{
+/*{
+    id: 1
+    name: "Goku"
+    ki: "60.000.000"
+    maxKi: "90 Septillion"
+    race: "Saiyan"
+    gender: "Male"
+    description: "El protagonista de la serie, conocido por su gran ..."
+    image: "https://dragonball-api.com/characters/goku_normal...."
+    affiliation: "Z Fighter"
+    deletedAt: null
+    originPlanet: {
+        id: 3
+        name: "Vegeta"
+        isDestroyed: true
+        description: "El planeta Vegeta, conocido como planeta Plant ant..."
+        image: "https://dragonball-api.com/planetas/Planeta_Vegeta..."
+        deletedAt: null
+        }
+}*/
+}
