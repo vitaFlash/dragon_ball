@@ -1,25 +1,31 @@
-const requestURL = '../json/dragons.json'; /*'http://localhost:3000/dragons';*/
+const requestURL = 'https://dragonball-api.com/api/characters';
 
-async function fetchDragonsJsons() {
+
+async function fetchAllCharactersJsons() {
     const response = await fetch(requestURL);
-    const dragons = await response.json();
-    return dragons;
+    const data = await response.json();
+    return data;
 }
 
-fetchDragonsJsons().then(dragon => {
-    for (let index = 0; index < dragon.dragons.length; index++) {
-        let dragon_name = dragon.dragons[index].name;
-        let dragon_race = dragon.dragons[index].race;
-        let dragon_ki = dragon.dragons[index].ki;
-        let dragon_maxKi = dragon.dragons[index].maxKi;
-        let dragon_gender = dragon.dragons[index].gender;
-        let gragon_image = dragon.dragons[index].image;
+fetchAllCharactersJsons().then(item => {
+    
+    item.items.forEach(character => {
+        let character_name = character.name;
+        let character_race = character.race;
+        let character_ki = character.ki;
+        let character_maxKi = character.maxKi;
+        let character_gender = character.gender;
+        let character_image = character.image;
 
-        dragonSection.innerHTML += `
-            <div>${dragon_name}</div>
-            <p>${dragon_race} - ${dragon_gender}</p>
-            <p>Base KI: ${dragon_ki}</p>
-            <p>Total KI: ${dragon_maxKi}</p>
-        `
+        characterSection.innerHTML += `
+            <div class="caracter_card">
+                <img src=${character_image} alt="...">
+                <p>${character_name}</p>
+                <p>${character_race} - ${character_gender}</p>
+                <p>Base KI: ${character_ki}</p>
+                <p>Total KI: ${character_maxKi}</p>
+            </div>
+            `
     }
+    )
 })
