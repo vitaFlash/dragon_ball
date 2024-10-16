@@ -12,6 +12,8 @@ async function fetchAllPlanetsJsons() {
     totalPages = firstData.meta.totalPages;
     currentURL = firstData.links.next;
 
+    console.log(totalPages)
+
     for (let page = 1; page < totalPages; page++) {
         const response = await fetch(currentURL);
         const data = await response.json();
@@ -21,3 +23,21 @@ async function fetchAllPlanetsJsons() {
     }
     return allPlanets;
 }
+
+fetchAllPlanetsJsons().then(planets => {
+    planets.forEach(planet => {
+        let planet_name = planet.name;
+        let planet_isDestroyed = planet.isDestroyed;
+        let planet_description = planet.description;
+        let planet_image = planet.image;
+
+        planetSection.innerHTML += `
+            <div class="planet_card">
+                <img src="${planet_image}" alt="${planet_image}">
+                <h2>${planet_name}</h2>
+                <p>${planet_isDestroyed}</p>
+                <p>Base KI: ${planet_description}</p>
+            </div>
+        `;
+    });
+});
