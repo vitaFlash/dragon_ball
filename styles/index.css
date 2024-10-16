@@ -8,6 +8,7 @@
     height: 30px;
     margin:0;
 }
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -23,7 +24,6 @@ header img {
     width: 200px;
 }
 
-
 .character_card {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -31,9 +31,8 @@ header img {
 }
 
 .card img {
-    width: 80%;
-    object-fit: cover;
-    gap: 20px;
+    width: 100%;
+    border-radius: 8px;
 }
 
 .card {

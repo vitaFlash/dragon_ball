@@ -1,20 +1,33 @@
 document.getElementById('planetsButton').addEventListener('click', function() {
     window.location.href = 'planets.html';
   });
+
 const requestURL = 'https://dragonball-api.com/api/characters';
-let totalPages = 0;
 
 async function fetchAllCharactersJsons() {
-    const response = await fetch(requestURL);
-    const data = await response.json();
-    totalPages = data.meta.totalPages
-    console.log(totalPages)
-    return data
+    let allCharacters = [];
+    let currentURL = requestURL;
+    let totalPages = 1;
+
+    const firstResponse = await fetch(currentURL);
+    const firstData = await firstResponse.json();
+    
+    allCharacters = allCharacters.concat(firstData.items);
+    totalPages = firstData.meta.totalPages;
+    currentURL = firstData.links.next;
+
+    for (let page = 1; page < totalPages; page++) {
+        const response = await fetch(currentURL);
+        const data = await response.json();
+
+        allCharacters = allCharacters.concat(data.items);
+        currentURL = data.links.next;
+    }
+    return allCharacters;
 }
 
-fetchAllCharactersJsons().then(item => {
-    console.log(totalPages)
-    item.items.forEach(character => {
+fetchAllCharactersJsons().then(characters => {
+    characters.forEach(character => {
         let character_name = character.name;
         let character_race = character.race;
         let character_ki = character.ki;
@@ -24,13 +37,12 @@ fetchAllCharactersJsons().then(item => {
 
         characterSection.innerHTML += `
             <div class="card">
-                <img src=${character_image} alt="...">
+                <img src="${character_image}" alt="${character_name}">
                 <h2>${character_name}</h2>
                 <p>${character_race} - ${character_gender}</p>
                 <p>Base KI: ${character_ki}</p>
                 <p>Total KI: ${character_maxKi}</p>
             </div>
-            `
-    }
-    )
-})
+        `;
+    });
+});
