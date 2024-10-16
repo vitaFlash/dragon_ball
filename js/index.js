@@ -20,7 +20,7 @@ fetchAllCharactersJsons().then(item => {
         characterSection.innerHTML += `
             <div class="card">
                 <img src=${character_image} alt="...">
-                <p>${character_name}</p>
+                <h2>${character_name}</h2>
                 <p>${character_race} - ${character_gender}</p>
                 <p>Base KI: ${character_ki}</p>
                 <p>Total KI: ${character_maxKi}</p>
