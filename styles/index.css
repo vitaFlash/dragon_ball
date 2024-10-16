@@ -3,6 +3,11 @@
 @import url('card.css');
 @import url('character_card.css');*/
 
+.planetsBtn {
+    width: 60px;
+    height: 30px;
+    margin:0;
+}
 * {
     box-sizing: border-box;
     margin: 0;
