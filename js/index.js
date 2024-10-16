@@ -2,15 +2,18 @@ document.getElementById('planetsButton').addEventListener('click', function() {
     window.location.href = 'planets.html';
   });
 const requestURL = 'https://dragonball-api.com/api/characters';
+let totalPages = 0;
 
 async function fetchAllCharactersJsons() {
     const response = await fetch(requestURL);
     const data = await response.json();
+    totalPages = data.meta.totalPages
+    console.log(totalPages)
     return data
 }
 
 fetchAllCharactersJsons().then(item => {
-    
+    console.log(totalPages)
     item.items.forEach(character => {
         let character_name = character.name;
         let character_race = character.race;
