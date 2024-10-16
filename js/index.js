@@ -18,7 +18,7 @@ fetchAllCharactersJsons().then(item => {
         let character_image = character.image;
 
         characterSection.innerHTML += `
-            <div class="caracter_card">
+            <div class="card">
                 <img src=${character_image} alt="...">
                 <p>${character_name}</p>
                 <p>${character_race} - ${character_gender}</p>
