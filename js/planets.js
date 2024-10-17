@@ -32,12 +32,12 @@ fetchAllPlanetsJsons().then(planets => {
         let planet_image = planet.image;
 
         planetSection.innerHTML += `
-            <div class="planet_card">
+            <div class="planet_grid">
                 <img src="${planet_image}" alt="${planet_image}">
                 <h2>${planet_name}</h2>
                 <p>${planet_isDestroyed}</p>
                 <p>Description: ${planet_description}</p>
             </div>
         `;
-    });
+    }); 
 });

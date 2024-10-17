@@ -10,6 +10,23 @@
     padding: 20px;
 }
 
-.planet_card {
-    
+.planet_card{
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    gap: 10px;
+}
+
+.planet_card img {
+    width: 100%;
+    max-height: 250px;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.planet_card h2 {
+    margin: 10px 0;
+    font-size: 18px;
 }
