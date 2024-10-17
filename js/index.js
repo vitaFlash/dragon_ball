@@ -1,7 +1,3 @@
-document.getElementById('planetsButton').addEventListener('click', function() {
-    window.location.href = 'planets.html';
-  });
-
 const requestURL = 'https://dragonball-api.com/api/characters';
 
 async function fetchAllCharactersJsons() {

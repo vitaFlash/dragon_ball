@@ -1,14 +1,7 @@
-/*@import url('header.css');
-@import url('footer.css');
-@import url('card.css');
+/*@import url('header_index');
+@import url('footer_index.css');
+@import url('card_index.css');
 @import url('character_card.css');*/
-
-.planetsBtn {
-    width: 60px;
-    height: 30px;
-    margin:0;
-}
-
 * {
     box-sizing: border-box;
     margin: 0;

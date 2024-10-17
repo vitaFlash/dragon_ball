@@ -3,3 +3,13 @@
     height: 30px;
     margin-left: 20px;
 }
+
+.planet_card {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    padding: 20px;
+}
+
+.planet_card {
+    
+}
