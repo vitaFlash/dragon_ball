@@ -1,16 +1,28 @@
-.backBtn {
-    width: 60px;
-    height: 30px;
-    margin-left: 20px;
+header a {
+    display: flex;
+    justify-content:left;
+    color: rgb(69, 106, 93);
+    margin-left: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(188, 204, 199);
 }
 
 .planet_card {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    padding: 20px;
+    margin-bottom: 20px;
+    gap: 10px;
+    padding: 10px;
 }
 
-.planet_card{
+.planet_grid {
     background-color: white;
     padding: 15px;
     border-radius: 8px;
@@ -19,14 +31,28 @@
     gap: 10px;
 }
 
-.planet_card img {
+.planet_grid img {
     width: 100%;
     max-height: 250px;
     object-fit: contain;
     border-radius: 8px;
 }
 
-.planet_card h2 {
-    margin: 10px 0;
+.planet_grid h2 {
     font-size: 18px;
+    background-color: white;
+}
+
+.planet_grid p {
+    font-size: 14px;
+    color: #555;
+    background-color: white;
+    text-align: left;
+    margin-bottom: 0;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
 }

@@ -1,65 +1,17 @@
-/*@import url('header_index');
-@import url('footer_index.css');
+@import url('header_index');
 @import url('card_index.css');
-@import url('character_card.css');*/
+@import url('character_card.css');
+@import url('footer_index.css');
+
 * {
     box-sizing: border-box;
+    background-color: rgb(188, 204, 199);
     margin: 0;
     padding: 0;
-}
-
-header a {
-    display: flex;
-    justify-content:right;
-    margin-right: 40px;
-    margin-top: 20px;
 }
 
 .logo {
     display: flex;
     justify-content: center;
-}
-
-header img {
-    width: 200px;
-}
-
-.character_card {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     margin-bottom: 20px;
-}
-
-.card img {
-    width: 100%;
-    max-height: 250px;
-    object-fit: contain;
-    border-radius: 8px;
-}
-
-.card {
-    background-color: white;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    gap: 10px;
-}
-
-.card h2 {
-    margin: 0;
-    font-size: 18px;
-    text-align: left;
-}
-
-.card p {
-    font-size: 14px;
-    color: #555;
-    text-align: left;
-    margin-bottom: 0;
-}
-
-
-footer {
-    display: flex;
-    justify-content: center;
 }

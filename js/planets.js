@@ -35,7 +35,7 @@ fetchAllPlanetsJsons().then(planets => {
             <div class="planet_grid">
                 <img src="${planet_image}" alt="${planet_image}">
                 <h2>${planet_name}</h2>
-                <p>${planet_isDestroyed}</p>
+                <p>Destroyed: ${planet_isDestroyed}</p>
                 <p>Description: ${planet_description}</p>
             </div>
         `;
