@@ -6,6 +6,10 @@ Features
 * Fetch Dragon Ball characters using an API.
 * Display all characters on a single page.
 * Character cards include name, race, gender, KI level, and an image.
-* Button to navigate to the planets page (currently not implemented).
+* Button to navigate to the planets page.
 
-
+Technologies
+* HTML
+* CSS
+* JavaScript
+* Fetch API (to retrieve data from the API)
