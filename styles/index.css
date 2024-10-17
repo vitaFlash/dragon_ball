@@ -1,7 +1,5 @@
-@import url('header_index');
 @import url('card_index.css');
 @import url('character_card.css');
-@import url('footer_index.css');
 
 * {
     box-sizing: border-box;
@@ -10,8 +8,22 @@
     padding: 0;
 }
 
+header a {
+    display: flex;
+    justify-content:right;
+    color: rgb(69, 106, 93);
+    margin-right: 40px;
+    margin-top: 20px;
+}
+
 .logo {
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
 }
