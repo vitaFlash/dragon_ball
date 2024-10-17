@@ -13,3 +13,17 @@ Technologies
 * CSS
 * JavaScript
 * Fetch API (to retrieve data from the API)
+
+Requirements
+* A modern web browser (Chrome, Firefox, Edge, etc.)
+* A local or remote server (like Live Server for VS Code)
+
+Installation
+1. Download or clone this repository:
+    git clone https://github.com/NepyAnna/dragon_ball.git
+2. Open the project in your code editor (e.g., VS Code).
+3. Make sure all files are placed in the correct directories:
+    * index.html — The main HTML file.
+    * js/index.js — JavaScript file for fetching and displaying characters.
+    * styles/index.css — CSS file for styling the page and cards.
+4. Git
