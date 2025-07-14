@@ -34,6 +34,17 @@ Installation
     * *.html — The main HTML files for both planets and characters pages.
     * js/*.js — JavaScript files for fetching and displaying characters.
     * styles/*.css — CSS files for styling the pages and cards.
+How to run in Docker
+1. **Build the Docker image:**
+```bash
+docker build -t dragon-image .
+```
+3. **Run the container:**
+```bash
+docker run -d -p dragon-image 8081:80 
+```
+4. **Open the project in a browser:**
+   Go to http://localhost:8080
 
 How to Run the Project
 -------------------------------------------------------------------------
