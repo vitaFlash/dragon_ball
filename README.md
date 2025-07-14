@@ -44,7 +44,7 @@ docker build -t dragon-image .
 docker run -d -p dragon-image 8081:80 
 ```
 4. **Open the project in a browser:**
-   Go to http://localhost:8080
+   Go to http://localhost:8081
 
 How to Run the Project
 -------------------------------------------------------------------------
